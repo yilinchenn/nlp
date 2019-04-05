@@ -1,0 +1,7 @@
+0.31325,0.2675,0.434375,0.422125,0.461375
+0.392375,0.272,0.427375,0.44175,0.45575
+0.359375,0.272875,0.433375,0.38325,0.458125
+0.34375,0.273375,0.43325,0.388375,0.46625
+0.31475,0.27925,0.444,0.42575,0.461625
+0.001908093079720387,1.5946708196954336e-07,0.0004885693072641808,0.016761904872449607
+The p-value against classifier 2 is the smallest. It means that the best classifier (classifier 5) is significantly better than classifier 2. The largest p-value is the one against classifier 4. It means that classifier 4 is the second best and it is not significant worse than the best one (classifier 5).

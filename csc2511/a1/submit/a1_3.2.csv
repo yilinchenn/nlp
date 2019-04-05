@@ -1,0 +1,2 @@
+0.37575,0.43075,0.452875,0.456125,0.462
+It appears that there is an expected trend of accuracy increasing if more training data is used. This is because with more training data the diversity of the data increases so that the trained machine learning model is more generalized. Thus the trained model can make more accurate prediction with general data in the problem domain.

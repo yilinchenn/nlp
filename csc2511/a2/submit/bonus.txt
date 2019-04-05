@@ -1,0 +1,2 @@
+Good turing smoothing is used to re-distrubute the portion of probability of n-grams occurring r times to the the portion of probability of n-grams occurring r+1 times. in order to smooth the zero probability.
+However, n-grams occurring r+1 times may not exist, and there is no probability to distribute when we reach r_max. This smoothing technique needs to be fixed by using a power law function to smooth out number of occurrence that does not exist. 

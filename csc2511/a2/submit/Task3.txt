@@ -1,0 +1,21 @@
+English:
+configuration		perplexity
+MLE (no smoothing)   	13.750877829050092
+delta = 0.01 		41.80779295545667
+delta = 0.1  		60.03252391378701
+delta = 0.5		98.89543820491161
+delta = 1		131.3166058330904
+
+French:
+configuration		perplexity
+MLE (no smoothing)	13.064453058869885
+delta = 0.01		41.1379110090025
+delta = 0.1 		63.80001865621624
+delta = 0.5		111.84878262602997
+delta = 1		153.01626839524167
+
+Perplexity of test data is a measure of how different the test data is compared to the training data we used to gerenate our language. Higher perplexity means that it is more diffcult to correctly predict bigrams in test data with the language model trained by training data. Lower perplexity indicates a better language model.
+
+From the test result, we can see that perplexity increases as delta increases. This is the expected trend. Increasing delta means that we are taking more weight from more probable events and distributing them between unseen bigrams. Thus, the probability does not concentrate on more probable events and the probability distribution becomes more uniform, which makes it more diffcult to predict the results correctly.
+
+we can see that the MLE perplexity of English and French are realtively low. The reason could be that we split the Canadian Hansard corpus to train the language model and calculate perplexity, thus the training and testing data are very similar so we can get a low perplexity. Besides, the perplexity code we are given filters out all the unseen events (probability is -inf), thus we can get a low perplexity result in the end. 

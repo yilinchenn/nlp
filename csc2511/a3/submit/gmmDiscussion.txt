@@ -1,0 +1,34 @@
+Epsilon is zero in all experiments.
+
+M		maxIter		numSpeakers		Accuracy
+3       1           32              0.781250
+5       1           32              0.96875
+8       1           32              1
+
+The result shows that as M increases, the accuracy increases. This is the expected trend because if M is a very small number, the mixture model will be too simple to accurately characterize the data. The iteration number is set to 1 in the experiments in order to make the trend clear.
+
+
+M		maxIter		numSpeakers		Accuracy
+4       1           32              0.906250
+4       10          32              0.96875
+4       20          32              1
+
+The result shows that as maxIter increases, the accuracy increases. This is the expected trend because the model will be sufficiently trained with more iterations.
+
+M		maxIter		numSpeakers		Accuracy
+4       1           32              0.875000
+4       1           16              0.937500
+4       1           8               1
+
+The result shows that the accuracy decreases as the number of speakers increases. This is the expected trend because more speakers mean that there are more possible candidates to choose, and the classifier is more likely to be confused and make mistakes which will decrease the classfication accuracy. The iteration number is set to 1 in the experiments in order to make the trend clear.
+
+1. How might you improve the classification accuracy of the Gaussian mixtures, without adding more training data?
+We can increase maxIter to train the model more sufficiently and the given training data will be better learned. Besides, we can also increase M to make the mixture model more complex which can better describe the data. However, if M is too big, there is a chance that the model may lose its generality and the accuracy may decrease due to over-fitting. Thus, M can only be increased within a reasonable range.
+
+2. When would your classifier decide that a given test utterance comes from none of the trained speaker models, and how would your classifier come to this decision?
+The classifier will calculate the likehood of the test utterance for each trained speaker model and the one with the highest likehood is predicted to be the speaker of the test utterance. A threshold for the calculated likehood can be used to determine whether the predicted result is good enough to be accepted. If the likehood of the predicted result is below the threshold, the classifier can say that this given test utterance comes from none of the trained speaker models.
+
+3. Can you think of some alternative methods for doing speaker identification that don’t use Gaussian mixtures?
+K-mean clusters can be used to classify the speakers. Each speaker belongs to a cluster and the closest cluster near the test data is the predicted category. Neural network can be used as well to train the model for speaker identification.
+
+
